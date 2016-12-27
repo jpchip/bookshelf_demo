@@ -33,3 +33,7 @@ curl -sL --silent https://deb.nodesource.com/setup_6.x | sudo -E bash -  > /dev/
 sudo apt-get install -y nodejs > /dev/null 2>&1
 
 cd /vagrant && npm install
+
+### Run Migrations
+
+cd /vagrant && npm run migrate

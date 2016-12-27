@@ -5,15 +5,16 @@ export default class Database {
 
     private static _instance : Database = new Database();
 
-    private _knex:any = null;
+    protected _knex:any = null;
 
-    private _bookshelf : any = null;
+    protected _bookshelf : any = null;
 
     constructor() {
         if(Database._instance){
             throw new Error("Error: Instantiation failed: Use Database.getInstance() instead of new.");
         }
 
+        //@todo pull config from knexfile
         this._knex = Knex({
             client: 'pg',
             connection: {
@@ -35,12 +36,12 @@ export default class Database {
         return Database._instance;
     }
 
-    public static getKnex(): any
+    public getKnex(): any
     {
         return this._knex;
     }
 
-    public static getBookshelf(): any
+    public getBookshelf(): Bookshelf
     {
         return this._bookshelf;
     }

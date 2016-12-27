@@ -5,9 +5,12 @@
   "main": "build/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "./node_modules/typescript/bin/tsc",
-    "compile": "./node_modules/typescript/bin/tsc && node build/app.js",
-    "start": "nodemon -L --watch src -e ts --exec \"npm run compile\""
+    "build": "./node_modules/typescript/bin/tsc --allowJs",
+    "compile": "./node_modules/typescript/bin/tsc --allowJs && node build/app.js",
+    "start": "nodemon -L --watch src -e ts --exec \"npm run compile\"",
+    "migrate": "knex migrate:latest",
+    "migrate:make": "knex migrate:make",
+    "migrate:rollback": "knex migrate:rollback"
   },
   "author": "",
   "license": "MIT",
