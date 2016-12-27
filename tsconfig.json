@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "sourceMap": true,
+    "outDir": "./build/",
+    "removeComments": true,
+    "watch": false
+  },
+  "exclude": [
+    "typings/browser.d.ts",
+    "typings/browser"
+  ],
+  "include": [
+    "./src/**/*"
+  ]
+}

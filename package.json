@@ -1,0 +1,31 @@
+{
+  "name": "bookshelf_demo",
+  "version": "0.0.1",
+  "description": "demo REST API with express, knex, bookshelf, and typescript ",
+  "main": "build/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./node_modules/typescript/bin/tsc",
+    "compile": "./node_modules/typescript/bin/tsc && node build/app.js",
+    "start": "nodemon -L --watch src -e ts --exec \"npm run compile\""
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "bookshelf": "^0.10.2",
+    "bookshelf-api": "^1.7.0",
+    "knex": "^0.12.6",
+    "koa": "^1.2.4",
+    "koa-router": "^5.4.0",
+    "pg": "^6.1.2",
+    "typings": "^2.1.0"
+  },
+  "devDependencies": {
+    "@types/bookshelf": "^0.8.34",
+    "@types/koa": "^2.0.37",
+    "@types/koa-router": "^7.0.21",
+    "@types/node": "^6.0.53",
+    "nodemon": "^1.11.0",
+    "typescript": "^2.1.4"
+  }
+}
