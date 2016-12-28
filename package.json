@@ -1,7 +1,7 @@
 {
   "name": "bookshelf_demo",
   "version": "0.0.1",
-  "description": "demo REST API with express, knex, bookshelf, and typescript ",
+  "description": "example REST API using Typescript, Koa, Bookshelf, Knex, Postgresql",
   "main": "build/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -16,6 +16,7 @@
   },
   "author": "Jared Chapiewsky",
   "license": "MIT",
+  "repository": "https://github.com/jpchip/bookshelf_demo.git",
   "dependencies": {
     "bookshelf": "^0.10.2",
     "bookshelf-api": "^1.7.0",
