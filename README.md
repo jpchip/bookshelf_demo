@@ -1,20 +1,22 @@
-# Bookshelf
+# bookshelf_demo
 
-Test REST API using Typescript, Koa, bookshelf, knex, postgresql
+An example REST API using Typescript, Koa, Bookshelf, Knex, Postgresql.
+
+A playground for me to test out how these libraries work together.
 
 ## Development
 
 ```
 $ vagrant up
 $ vagrant ssh
-$ make start
+$ cd /vagrant && make start
 ```
 
-Server available at:
+Server is available at:
 
 http://192.168.250.254:3000/
 
-Will watch for changes in the `src` directory.
+Will watch for changes to *.ts files in the `src` directory.
 
 ## Database Migrations
 
@@ -36,12 +38,42 @@ Rollback:
 $ make migrate-rollback
 ```
 
+Run seeds:
+
+```
+$ make seed
+```
+
+Make seed:
+
+Note: they are run in alphabetical order.
+
+```
+$ make seed-make -- name_of_seed
+```
+
 ## API
 
 ### /
 
 Hello World
 
-### /users
+### GET /users
 
 Returns all users.
+
+### GET /users/{id}
+
+Returns a single user with given id
+
+### POST /users
+
+Creates a new user.
+
+Example Body:
+```
+{
+    "username":"joe",
+    "password":"123456"
+}
+```

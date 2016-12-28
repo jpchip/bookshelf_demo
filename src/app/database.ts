@@ -14,7 +14,7 @@ export default class Database {
             throw new Error("Error: Instantiation failed: Use Database.getInstance() instead of new.");
         }
 
-        //@todo pull config from knexfile
+        //@todo pull config info from knexfile.js!!
         this._knex = Knex({
             client: 'pg',
             connection: {

@@ -10,15 +10,18 @@
     "start": "nodemon -L --watch src -e ts --exec \"npm run compile\"",
     "migrate": "knex migrate:latest",
     "migrate:make": "knex migrate:make",
-    "migrate:rollback": "knex migrate:rollback"
+    "migrate:rollback": "knex migrate:rollback",
+    "seed": "knex seed:run",
+    "seed:make": "knex seed:make"
   },
-  "author": "",
+  "author": "Jared Chapiewsky",
   "license": "MIT",
   "dependencies": {
     "bookshelf": "^0.10.2",
     "bookshelf-api": "^1.7.0",
     "knex": "^0.12.6",
     "koa": "^1.2.4",
+    "koa-bodyparser": "^2.3.0",
     "koa-router": "^5.4.0",
     "pg": "^6.1.2",
     "typings": "^2.1.0"

@@ -34,6 +34,6 @@ sudo apt-get install -y nodejs > /dev/null 2>&1
 
 cd /vagrant && npm install
 
-### Run Migrations
+### Run Migrations and seeds
 
-cd /vagrant && npm run migrate
+cd /vagrant && npm run migrate && npm run seed
