@@ -7,10 +7,6 @@
     "removeComments": true,
     "watch": false
   },
-  "exclude": [
-    "typings/browser.d.ts",
-    "typings/browser"
-  ],
   "include": [
     "./src/**/*"
   ]
